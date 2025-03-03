@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centered Rectangle with Content</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -12,21 +13,20 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            background-color: #F5D04E;
+            font-family: 'Figtree', Arial, sans-serif;
         }
 
         .rectangle {
-            width: 382px;
-            height: 520px;
-            background-color: white;
-            border-radius: 20px;
-            border: 1px solid black;
-            position: relative;
-            z-index: 1; /* Makes the rectangle appear in front */
-            top: 8px; /* Moves the rectangle 8px down */
-            left: 8px; /* Moves the rectangle 8px to the right */
-        }
+        width: 382px;
+        height: 520px;
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid black;
+        position: relative;
+        z-index: 1; /* Makes the rectangle appear in front */
+        box-shadow: 8px 8px 0 0 black; /* Adds 8px shadow to the right and bottom */
+    }
 
         .content {
             position: relative;
@@ -48,8 +48,12 @@
     <div class="rectangle"></div>
 
     <div class="content">
-        <h1>Welcome to My Page</h1>
-        <p>This is a sample paragraph.</p>
+      <p1>Learning</p1>
+      <p2>Published 21 Dec 2023</p2>
+      <h1>HTML & CSS foundations</h1>
+      <p3>These languages are the backbone of every 
+          website, defining structure, content, and 
+          presentation</p3>
     </div>
 </body>
 </html>
