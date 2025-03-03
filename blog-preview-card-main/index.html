@@ -8,7 +8,6 @@
     <style>
         body {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -18,21 +17,37 @@
         }
 
         .rectangle {
-        width: 382px;
-        height: 520px;
-        background-color: white;
-        border-radius: 20px;
-        border: 1px solid black;
-        position: relative;
-        z-index: 1; /* Makes the rectangle appear in front */
-        box-shadow: 8px 8px 0 0 black; /* Adds 8px shadow to the right and bottom */
-    }
+            width: 382px;
+            background-color: white;
+            border-radius: 20px;
+            border: 1px solid black;
+            box-shadow: 8px 8px 0 0 black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .rectangle img.illustration {
+            width: 336px;
+            height: 201px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .rectangle img.avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
 
         .content {
-            position: relative;
-            z-index: 0; /* Content will appear behind the rectangle */
-            margin-top: 20px; /* Adds space below the rectangle */
             text-align: center;
+            margin-top: 20px;
         }
 
         h1 {
@@ -45,15 +60,15 @@
     </style>
 </head>
 <body>
-    <div class="rectangle"></div>
-
-    <div class="content">
-      <p1>Learning</p1>
-      <p2>Published 21 Dec 2023</p2>
-      <h1>HTML & CSS foundations</h1>
-      <p3>These languages are the backbone of every 
-          website, defining structure, content, and 
-          presentation</p3>
+    <div class="rectangle">
+        <img class="illustration" src="assets/images/illustration-article.svg" alt="Illustration Image">
+        <img class="avatar" src="assets/images/image-avatar.webp" alt="Avatar">
+        <div class="content">
+            <p>Learning</p>
+            <p>Published 21 Dec 2023</p>
+            <h1>HTML & CSS foundations</h1>
+            <p>These languages are the backbone of every website, defining structure, content, and presentation</p>
+        </div>
     </div>
 </body>
 </html>
